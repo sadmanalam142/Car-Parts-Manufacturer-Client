@@ -1,0 +1,50 @@
+[
+    {
+        "name" : "Battery",
+        "minOrderQuantity" : "20",
+        "availableQuantity" : "1000",
+        "price" : "799",
+        "description" : "",
+        "img" : ""
+    },
+    {
+        "name" : "Brakes",
+        "minOrderQuantity" : "",
+        "availableQuantity" : "",
+        "price" : "",
+        "description" : "",
+        "img" : ""
+    },
+    {
+        "name" : "Engine",
+        "minOrderQuantity" : "",
+        "availableQuantity" : "",
+        "price" : "",
+        "description" : "",
+        "img" : ""
+    },
+    {
+        "name" : "Fuel Tank",
+        "minOrderQuantity" : "",
+        "availableQuantity" : "",
+        "price" : "",
+        "description" : "",
+        "img" : ""
+    },
+    {
+        "name" : "Gear Lever",
+        "minOrderQuantity" : "",
+        "availableQuantity" : "",
+        "price" : "",
+        "description" : "",
+        "img" : ""
+    },
+    {
+        "name" : "Wheel",
+        "minOrderQuantity" : "",
+        "availableQuantity" : "",
+        "price" : "",
+        "description" : "",
+        "img" : ""
+    }
+]
