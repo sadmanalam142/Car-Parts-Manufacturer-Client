@@ -27,7 +27,7 @@ const Header = () => {
                             {menubar}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Car Parts Manufacturer</a>
+                    <a className="btn btn-ghost normal-case text-xl text-primary">Car Parts Manufacturer</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">

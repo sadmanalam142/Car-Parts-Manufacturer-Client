@@ -4,47 +4,47 @@
         "minOrderQuantity" : "20",
         "availableQuantity" : "1000",
         "price" : "799",
-        "description" : "",
-        "img" : ""
+        "description" : "We manufacter quality batteries. On average, a battery will last 3 to 5 years, but driving habits and exposure to extreme elements can shorten the life of your car battery.",
+        "img" : "https://i.ibb.co/qnt9csJ/Battery.jpg"
     },
     {
         "name" : "Brakes",
-        "minOrderQuantity" : "",
-        "availableQuantity" : "",
-        "price" : "",
-        "description" : "",
-        "img" : ""
+        "minOrderQuantity" : "30",
+        "availableQuantity" : "1500",
+        "price" : "399",
+        "description" : "The brake system takes the kinetic energy of your moving vehicle and converts it to thermal energy through friction. That energy is used to slow and stop your four-thousand-pound-plus metal machine. And we make the best quality brakes.",
+        "img" : "https://i.ibb.co/nm4zqrT/Brakes.jpg"
     },
     {
         "name" : "Engine",
-        "minOrderQuantity" : "",
-        "availableQuantity" : "",
-        "price" : "",
-        "description" : "",
-        "img" : ""
+        "minOrderQuantity" : "15",
+        "availableQuantity" : "700",
+        "price" : "5599",
+        "description" : "An engine is some machine that converts energy from a fuel to some mechanical energy, creating motion in the process. Engines - such as the ones used to run vehicles - can run on a variety of different fuels. Our engine provides 590 HP.",
+        "img" : "https://i.ibb.co/ZWWFKKP/Engine.jpg"
     },
     {
         "name" : "Fuel Tank",
-        "minOrderQuantity" : "",
-        "availableQuantity" : "",
-        "price" : "",
-        "description" : "",
-        "img" : ""
+        "minOrderQuantity" : "25",
+        "availableQuantity" : "1200",
+        "price" : "899",
+        "description" : "A fuel tank is a safe container in a car used to store flammable fluids like petrol/ethanol/ to avoid any fire-related hazard. The gas tank is made out of different materials but the common ones you find in cars are gas tanks made out of plastic, steel, aluminum, and welded metal sheets. We are sellng the best fuel tank",
+        "img" : "https://i.ibb.co/Hxtw7Mh/Fuel-Tank.jpg"
     },
     {
         "name" : "Gear Lever",
-        "minOrderQuantity" : "",
-        "availableQuantity" : "",
-        "price" : "",
-        "description" : "",
-        "img" : ""
+        "minOrderQuantity" : "35",
+        "availableQuantity" : "2000",
+        "price" : "699",
+        "description" : "The term gear stick mostly refers to the shift lever of a manual transmission, while in an automatic transmission, a similar lever is known as a gear selector. A gear stick will normally be used to change gear whilst depressing the clutch pedal with the left foot to disengage the engine from the drivetrain and wheels. We make the best gear lever.",
+        "img" : "https://i.ibb.co/cNthTht/Gear-Lever.jpg"
     },
     {
         "name" : "Wheel",
-        "minOrderQuantity" : "",
-        "availableQuantity" : "",
-        "price" : "",
-        "description" : "",
-        "img" : ""
+        "minOrderQuantity" : "40",
+        "availableQuantity" : "2000",
+        "price" : "399",
+        "description" : "Wheels are those primitive circular blocks that rotate in order for the car to move. They are placed vertically under the vehicle which doesn't only allow movements but also provides the support of the vehicle and heavy loads. We are producing best class Wheel.",
+        "img" : "https://i.ibb.co/mSHksJx/Wheel.jpg"
     }
 ]
