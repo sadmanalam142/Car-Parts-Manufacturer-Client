@@ -12,12 +12,15 @@ const Header = () => {
     const menubar = <>
         <li><Link to='/'>Home</Link></li>
         {
-            user ? <li><button onClick={handleSignOut} class="btn btn-active btn-ghost">Sign Out</button></li> : <li><Link to='/login'>Login</Link></li>
+            user && <li><Link to='/dashboard'>Dashboard</Link></li>
+        }
+        {
+            user ? <li><button onClick={handleSignOut} class="btn bg-base-200 btn-ghost">Sign Out</button></li> : <li><Link to='/login'>Login</Link></li>
         }
     </>
     return (
         <div className='sticky top-0 z-50'>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-200">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -27,12 +30,17 @@ const Header = () => {
                             {menubar}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl text-primary">Car Parts Manufacturer</a>
+                    <a className="btn btn-ghost normal-case text-xl font-semibold text-primary">Car Parts Manufacturer</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         {menubar}
                     </ul>
+                </div>
+                <div className='navbar-end'>
+                    <label tabindex="1" for="my-drawer" className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
                 </div>
             </div>
         </div>

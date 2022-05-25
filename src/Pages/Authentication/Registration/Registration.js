@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
@@ -18,7 +18,10 @@ const Registration = () => {
     const [updateProfile, updating, UPError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
+    const location = useLocation();
     let errorMessage;
+
+    let from = location.state?.from?.pathname || "/";
 
     if(error || UPError){
         errorMessage = error.message || UPError.message;
@@ -29,7 +32,7 @@ const Registration = () => {
     }
 
     if (user) {
-        navigate('/');
+        navigate(from, { replace: true });
     }
 
     const handleRegistration = async (event) => {
@@ -42,8 +45,8 @@ const Registration = () => {
     }
     return (
         <div>
-            <h1 className="text-2xl text-center text-primary">Please Register!!</h1>
-            <div class="hero bg-base-200">
+            <h1 className="text-2xl font-bold text-center text-primary">Please Register!!</h1>
+            <div class="hero">
                 <div class="hero-content flex-col lg:flex-row-reverse w-2/4">
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div class="card-body">
@@ -52,19 +55,19 @@ const Registration = () => {
                                     <label class="label">
                                         <span class="label-text">Name</span>
                                     </label>
-                                    <input ref={nameRef} type="text" placeholder="name" class="input input-bordered" />
+                                    <input ref={nameRef} type="text" placeholder="name" class="input input-bordered" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text">Email</span>
                                     </label>
-                                    <input ref={emailRef} type="email" placeholder="email" class="input input-bordered" />
+                                    <input ref={emailRef} type="email" placeholder="email" class="input input-bordered" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text">Password</span>
                                     </label>
-                                    <input ref={passwordRef} type="password" placeholder="password" class="input input-bordered" />
+                                    <input ref={passwordRef} type="password" placeholder="password" class="input input-bordered" required />
                                 </div>
                                 <p className='text-red-500'><small>{errorMessage}</small></p>
                                 <div class="form-control mt-6">

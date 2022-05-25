@@ -57,8 +57,8 @@ const Login = () => {
 
     return (
         <div>
-            <h1 className="text-2xl text-center text-primary">Please Login!!</h1>
-            <div class="hero bg-base-200">
+            <h1 className="text-2xl font-bold text-center text-primary">Please Login!!</h1>
+            <div class="hero">
                 <div class="hero-content flex-col lg:flex-row-reverse w-2/4">
                     <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div class="card-body">
@@ -67,13 +67,13 @@ const Login = () => {
                                     <label class="label">
                                         <span class="label-text">Email</span>
                                     </label>
-                                    <input ref={emailRef} type="email" placeholder="email" class="input input-bordered" />
+                                    <input ref={emailRef} type="email" placeholder="email" class="input input-bordered" required />
                                 </div>
                                 <div class="form-control">
                                     <label class="label">
                                         <span class="label-text">Password</span>
                                     </label>
-                                    <input ref={passwordRef} type="password" placeholder="password" class="input input-bordered" />
+                                    <input ref={passwordRef} type="password" placeholder="password" class="input input-bordered" required />
                                     <label class="label">
                                         <p><small>Forgot password? <button className='text-primary' onClick={handlePasswordReset} >click to reset</button></small></p>
                                     </label>
@@ -82,7 +82,7 @@ const Login = () => {
                                 <div class="form-control mt-6">
                                     <input className='btn btn-primary' type="submit" value="Login" />
                                 </div>
-                                <p><small>New to Car Parts Manufacturer? <Link className='text-primary' to="/register">Create an Account</Link></small></p>
+                                <p><small>New to <span className='font-semibold'>Car Parts Manufacturer</span>? <Link className='text-primary' to="/register">Create an Account</Link></small></p>
                             </form>
                             <SocialLogin></SocialLogin>
                         </div>
