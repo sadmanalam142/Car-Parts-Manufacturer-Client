@@ -4,6 +4,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
+import useToken from '../../../CustomHooks/useToken';
 
 const Registration = () => {
     const nameRef = useRef();
@@ -16,6 +17,8 @@ const Registration = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
     const [updateProfile, updating, UPError] = useUpdateProfile(auth);
+
+    const [token] = useToken(user);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -31,7 +34,7 @@ const Registration = () => {
         return <Loading></Loading>;
     }
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 

@@ -6,6 +6,7 @@ import auth from '../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
 import { async } from '@firebase/util';
 import { toast } from 'react-toastify';
+import useToken from '../../../CustomHooks/useToken';
 
 const Login = () => {
     const emailRef = useRef();
@@ -21,6 +22,8 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, PRError] = useSendPasswordResetEmail(
         auth
     );
+
+    const [token] = useToken(user);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -40,7 +43,7 @@ const Login = () => {
         return <Loading></Loading>;
     }
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
