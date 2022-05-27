@@ -13,6 +13,7 @@ import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import AddAReview from './Pages/Dashboard/AddAReview/AddAReview';
 import MyProfile from './Pages/Dashboard/MyProfile/MyProfile';
+import Alluser from './Pages/Dashboard/AllUser/Alluser';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='addReview' element={<AddAReview></AddAReview>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='users' element={<Alluser></Alluser>}></Route>
         </Route>
 
         <Route path='*' element={<NotFound></NotFound>}></Route>
