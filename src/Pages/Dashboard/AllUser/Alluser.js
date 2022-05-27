@@ -15,14 +15,13 @@ const Alluser = () => {
         return <Loading></Loading>;
     }
     return (
-        <div class="overflow-x-auto">
+        <div class="overflow-x-auto mt-5">
             <table class="table w-full">
                 <thead>
                     <tr>
                         <th></th>
                         <th>Email</th>
                         <th>Admin Control</th>
-                        <th>Remove Control</th>
                     </tr>
                 </thead>
                 <tbody>
