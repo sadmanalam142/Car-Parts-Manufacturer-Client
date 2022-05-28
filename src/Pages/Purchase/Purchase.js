@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 
@@ -37,7 +38,12 @@ const Purchase = () => {
             body: JSON.stringify(order)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                if(data.insertedId){
+                    toast.success('Order Added in Dashboard')
+                    data.reset();
+                }
+            })
 
         const quantity = items.availableQuantity - quantityRef.current.value;
         const updatedQuantity = { quantity };

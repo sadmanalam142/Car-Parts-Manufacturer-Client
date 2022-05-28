@@ -1,7 +1,7 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const DeletingModal = ({ deletingProduct, refetch, setDeletingProduct }) => {
+const ProductDeletingModal = ({ deletingProduct, refetch, setDeletingProduct }) => {
     const { _id, name } = deletingProduct;
 
     const handleDelete = id => {
@@ -22,14 +22,14 @@ const DeletingModal = ({ deletingProduct, refetch, setDeletingProduct }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+            <input type="checkbox" id="product-deleting-modal" class="modal-toggle" />
             <div class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
                     <h3 class="font-bold text-lg text-red-500">Are you sure you want to delete {name}!</h3>
                     <p class="py-4">Once you delete the product, the product will disapear from the website.</p>
                     <div class="modal-action">
                         <button onClick={() => handleDelete(_id)} class="btn btn-error btn-xs">Delete</button>
-                        <label for="my-modal-6" class="btn btn-xs">cancel!</label>
+                        <label for="product-deleting-modal" class="btn btn-xs">cancel</label>
                     </div>
                 </div>
             </div>
@@ -37,4 +37,4 @@ const DeletingModal = ({ deletingProduct, refetch, setDeletingProduct }) => {
     );
 };
 
-export default DeletingModal;
+export default ProductDeletingModal;

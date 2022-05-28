@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../../../Shared/Loading/Loading';
-import DeletingModal from '../DeletingModal/DeletingModal';
+import ProductDeletingModal from '../ProductDeletingModal/ProductDeletingModal';
 import ProductsTable from '../ProductsTable/ProductsTable';
 
 const ManageProducts = () => {
@@ -41,11 +41,11 @@ const ManageProducts = () => {
                 </table>
             </div>
             {
-                deletingProduct && <DeletingModal
+                deletingProduct && <ProductDeletingModal
                 deletingProduct={deletingProduct}
                 refetch={refetch}
                 setDeletingProduct={setDeletingProduct}
-                ></DeletingModal>
+                ></ProductDeletingModal>
             }
         </div>
     );
