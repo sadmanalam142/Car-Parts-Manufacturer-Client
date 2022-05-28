@@ -13,7 +13,7 @@ const AddAReview = () => {
             description: descriptionRef.current.value
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://arcane-island-78808.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

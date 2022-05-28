@@ -10,7 +10,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     const { register, handleSubmit, reset } = useForm();
 
-    const { data: users, isLoading, refetch } = useQuery(['users', user.email], () => fetch(`http://localhost:5000/user/${user.email}`, {
+    const { data: users, isLoading, refetch } = useQuery(['users', user.email], () => fetch(`https://arcane-island-78808.herokuapp.com/user/${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -27,7 +27,7 @@ const MyProfile = () => {
             number: data.number,
             linkedIn: data.linkedIn
         }
-        fetch(`http://localhost:5000/user/${user.email}`, {
+        fetch(`https://arcane-island-78808.herokuapp.com/user/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

@@ -5,7 +5,7 @@ const OrderDeletingModal = ({ deletingOrder, refetch, setDeletingOrder }) => {
     const {_id, itemName } = deletingOrder;
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://arcane-island-78808.herokuapp.com/order/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
