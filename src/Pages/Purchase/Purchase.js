@@ -41,7 +41,6 @@ const Purchase = () => {
             .then(data => {
                 if(data.insertedId){
                     toast.success('Order Added in Dashboard')
-                    data.reset();
                 }
             })
 

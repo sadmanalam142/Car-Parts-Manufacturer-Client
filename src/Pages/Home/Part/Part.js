@@ -1,7 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import useAdmin from '../../../CustomHooks/useAdmin';
+import auth from '../../../firebase.init';
 
 const Part = ({ part }) => {
+    const [user] = useAuthState(auth)
+    const [admin] = useAdmin(user)
     const {_id, name, minOrderQuantity, availableQuantity, price, description, img } = part;
 
     const navigate = useNavigate();
@@ -21,7 +26,9 @@ const Part = ({ part }) => {
                 <p className='font-bold'>price: ${price}</p>
                 <p>{description}</p>
                 <div class="card-actions">
-                    <button onClick={handlePurchase} class=" btn bg-gradient-to-r from-secondary to-primary ">Purchase Now</button>
+                    {
+                        !admin && <button onClick={handlePurchase} class=" btn bg-gradient-to-r from-secondary to-primary ">Purchase Now</button>
+                    }
                 </div>
             </div>
         </div>
