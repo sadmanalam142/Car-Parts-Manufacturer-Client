@@ -52,7 +52,7 @@ const AddProduct = () => {
     return (
         <div>
             <h1 className='text-2xl text-center font-semibold my-5'>Add a Product</h1>
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-2/4 mx-auto mt-10 shadow-md shadow-gray-400">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col lg:w-2/4 mx-auto mt-10 shadow-md shadow-gray-400">
                 <div className='pl-5'>
                     <label className="label">
                         <span className="label-text">Name</span>

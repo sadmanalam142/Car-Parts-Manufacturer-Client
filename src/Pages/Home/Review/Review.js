@@ -3,7 +3,7 @@ import React from 'react';
 const Review = ({ review }) => {
     const { ratings, description } = review;
     return (
-        <div>
+        <div className='mb-5'>
             <div className='flex items-center justify-center'>
                 <p className='text-2xl font-semibold mr-2'>{ratings}</p>
                 <div class="rating">

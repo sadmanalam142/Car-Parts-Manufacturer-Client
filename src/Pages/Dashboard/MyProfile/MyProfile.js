@@ -56,7 +56,7 @@ const MyProfile = () => {
             </div>
             <div>
                 <h1 className='text-2xl text-center text-primary mt-10'>Update Profile</h1>
-                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-1/4 mx-auto mt-10 shadow-md shadow-gray-400">
+                <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col lg:w-1/4 mx-auto mt-10 shadow-md shadow-gray-400">
                     <div className='pl-5'>
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -66,17 +66,17 @@ const MyProfile = () => {
                         <label className="label">
                             <span className="label-text">Location</span>
                         </label>
-                        <input type="text" placeholder='location' {...register("location")} />
+                        <input type="text" placeholder='location' {...register("location", {required: true})} />
 
                         <label className="label">
                             <span className="label-text">Number</span>
                         </label>
-                        <input type="number" placeholder='number' {...register("number")} />
+                        <input type="number" placeholder='number' {...register("number", {required: true})} />
 
                         <label className="label">
                             <span className="label-text">LinkedIn</span>
                         </label>
-                        <input type="url" placeholder='url' {...register("linkedIn")} />
+                        <input type="url" placeholder='url' {...register("linkedIn", {required: true})} />
 
                         <input className='btn btn-primary mt-5 w-2/4 block mx-auto' type="submit" value="Add" />
                     </div>
