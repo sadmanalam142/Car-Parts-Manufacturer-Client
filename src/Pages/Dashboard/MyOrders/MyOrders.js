@@ -12,7 +12,7 @@ const MyOrders = () => {
     const navigate = useNavigate();
     const [deletingOrder, setDeletingOrder] = useState(null);
 
-    const { data: orders, isLoading, refetch } = useQuery(['order', user], () => fetch(`https://arcane-island-78808.herokuapp.com/order?email=${user.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery(['order', user], () => fetch(`https://fast-beyond-75941.herokuapp.com/order?email=${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

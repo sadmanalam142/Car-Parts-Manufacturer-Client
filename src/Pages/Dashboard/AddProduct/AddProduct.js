@@ -28,7 +28,7 @@ const AddProduct = () => {
                         description: data.description,
                         img: img
                     }
-                    fetch('https://arcane-island-78808.herokuapp.com/part', {
+                    fetch('https://fast-beyond-75941.herokuapp.com/part', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

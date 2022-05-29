@@ -6,7 +6,7 @@ import ProductsTable from '../ProductsTable/ProductsTable';
 
 const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
-    const { data: products, isLoading, refetch } = useQuery('doctors', () => fetch('https://arcane-island-78808.herokuapp.com/part', {
+    const { data: products, isLoading, refetch } = useQuery('doctors', () => fetch('https://fast-beyond-75941.herokuapp.com/part', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

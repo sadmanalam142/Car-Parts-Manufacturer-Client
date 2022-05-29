@@ -5,7 +5,7 @@ const User = ({ user, index, refetch }) => {
     const { email, role } = user;
 
     const makeAdmin = () => {
-        fetch(`https://arcane-island-78808.herokuapp.com/user/admin/${email}`, {
+        fetch(`https://fast-beyond-75941.herokuapp.com/user/admin/${email}`, {
             method: 'PUT',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

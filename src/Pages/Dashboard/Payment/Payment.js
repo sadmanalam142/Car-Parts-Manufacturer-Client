@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L4ADvA2LqtSlNUd1jVzE0VW2RPnzQCzOqdnP
 const Payment = () => {
     const { id } = useParams();
 
-    const { data: order, isLoading } = useQuery(['orders', id], () => fetch(`https://arcane-island-78808.herokuapp.com/order/${id}`, {
+    const { data: order, isLoading } = useQuery(['orders', id], () => fetch(`https://fast-beyond-75941.herokuapp.com/order/${id}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { toast } from 'react-toastify';
 
 const AddAReview = () => {
     const ratingsRef = useRef();
@@ -13,7 +14,7 @@ const AddAReview = () => {
             description: descriptionRef.current.value
         }
 
-        fetch('https://arcane-island-78808.herokuapp.com/review', {
+        fetch('https://fast-beyond-75941.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -21,7 +22,9 @@ const AddAReview = () => {
             body: JSON.stringify(rating)
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => 
+                toast.seccess('Review added successfully')
+                )
     }
     return (
         <div className='w-2/4 mx-auto mt-5'>

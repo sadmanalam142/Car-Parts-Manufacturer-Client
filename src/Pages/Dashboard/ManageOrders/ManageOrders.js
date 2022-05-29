@@ -5,7 +5,7 @@ import OrderDeletingModal from '../OrderDeletingModal/OrderDeletingModal';
 
 const ManageOrders = () => {
     const [deletingOrder, setDeletingOrder] = useState(null);
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch('https://arcane-island-78808.herokuapp.com/order', {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch('https://fast-beyond-75941.herokuapp.com/order', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -17,7 +17,7 @@ const ManageOrders = () => {
     }
 
     const handleStatus = id => {
-        fetch(`https://arcane-island-78808.herokuapp.com/order/${id}`, {
+        fetch(`https://fast-beyond-75941.herokuapp.com/order/${id}`, {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -29,7 +29,7 @@ const ManageOrders = () => {
                     const shippingUpdate = {
                         status: 'Shipped'
                     }
-                    fetch(`https://arcane-island-78808.herokuapp.com/order/${id}`, {
+                    fetch(`https://fast-beyond-75941.herokuapp.com/order/${id}`, {
                         method: 'PUT',
                         headers: {
                             'content-type' : 'application/json',

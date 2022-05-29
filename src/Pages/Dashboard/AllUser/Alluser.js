@@ -4,7 +4,7 @@ import Loading from '../../../Shared/Loading/Loading';
 import User from '../User/User';
 
 const Alluser = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://arcane-island-78808.herokuapp.com/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://fast-beyond-75941.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
