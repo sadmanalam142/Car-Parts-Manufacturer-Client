@@ -5,7 +5,7 @@ import { faPeopleGroup, faChartLine, faThumbsUp } from '@fortawesome/free-solid-
 const BussinessSummary = () => {
     return (
         <div>
-            <h1 className="text-4xl font-bold text-secondary text-center my-10">Trusted Business</h1>
+            <h1 className="text-4xl font-bold text-secondary text-center mt-48 mb-12">Trusted Business</h1>
             <div className='flex justify-around'>
                 <div className='text-center'>
                     <span className='text-6xl text-secondary'><FontAwesomeIcon icon={faPeopleGroup}></FontAwesomeIcon></span>
