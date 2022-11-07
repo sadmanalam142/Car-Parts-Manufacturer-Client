@@ -13,7 +13,7 @@ const Purchase = () => {
     const { id } = useParams();
     const [user] = useAuthState(auth);
 
-    const {data: items, isLoading, refetch} = useQuery('parts', () => fetch(`https://fast-beyond-75941.herokuapp.com/part/${id}`).then(res => res.json()));
+    const {data: items, isLoading, refetch} = useQuery('parts', () => fetch(`https://car-parts-manufacturer-85r7.onrender.com/part/${id}`).then(res => res.json()));
 
     if(isLoading){
         return <Loading></Loading>;
@@ -30,7 +30,7 @@ const Purchase = () => {
             quantity: quantityRef.current.value,
             price: quantityRef.current.value * items.price
         };
-        fetch('https://fast-beyond-75941.herokuapp.com/order', {
+        fetch('https://car-parts-manufacturer-85r7.onrender.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -46,7 +46,7 @@ const Purchase = () => {
 
         const quantity = items.availableQuantity - quantityRef.current.value;
         const updatedQuantity = { quantity };
-        const url = `https://fast-beyond-75941.herokuapp.com/part/${id}`;
+        const url = `https://car-parts-manufacturer-85r7.onrender.com/part/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

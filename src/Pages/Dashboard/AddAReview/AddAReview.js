@@ -14,7 +14,7 @@ const AddAReview = () => {
             description: descriptionRef.current.value
         }
 
-        fetch('https://fast-beyond-75941.herokuapp.com/review', {
+        fetch('https://car-parts-manufacturer-85r7.onrender.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

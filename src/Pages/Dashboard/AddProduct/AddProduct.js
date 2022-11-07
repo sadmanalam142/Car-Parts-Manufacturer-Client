@@ -28,7 +28,7 @@ const AddProduct = () => {
                         description: data.description,
                         img: img
                     }
-                    fetch('https://fast-beyond-75941.herokuapp.com/part', {
+                    fetch('https://car-parts-manufacturer-85r7.onrender.com/part', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

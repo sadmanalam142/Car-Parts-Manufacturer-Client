@@ -5,7 +5,7 @@ const ProductDeletingModal = ({ deletingProduct, refetch, setDeletingProduct }) 
     const { _id, name } = deletingProduct;
 
     const handleDelete = id => {
-        fetch(`https://fast-beyond-75941.herokuapp.com/part/${id}`, {
+        fetch(`https://car-parts-manufacturer-85r7.onrender.com/part/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

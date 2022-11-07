@@ -5,7 +5,7 @@ const Parts = () => {
     const [parts, setParts] = useState([]);
 
     useEffect(() => {
-        fetch('https://fast-beyond-75941.herokuapp.com/part')
+        fetch('https://car-parts-manufacturer-85r7.onrender.com/part')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])

@@ -13,7 +13,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, name, email } = order;
 
     useEffect(() => {
-        fetch('https://fast-beyond-75941.herokuapp.com/create-payment-intent', {
+        fetch('https://car-parts-manufacturer-85r7.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -78,7 +78,7 @@ const CheckoutForm = ({ order }) => {
                 order: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://fast-beyond-75941.herokuapp.com/order/${_id}`, {
+            fetch(`https://car-parts-manufacturer-85r7.onrender.com/order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
