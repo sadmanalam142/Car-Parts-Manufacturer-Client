@@ -6,7 +6,6 @@ const MyPortfolio = () => {
             <h1 className='text-2xl text-center font-semibold text-primary'>Welcome to my Portfolio</h1>
             <h4 className='text-lg text-center font-semibold mt-5'><span className='text-secondary'>My Name:</span> Sadman Prottay</h4>
             <h4 className='text-lg text-center font-semibold'><span className='text-secondary'>My Email:</span> sadmanalam142@gmail.com</h4>
-            <h4 className='text-lg text-center font-semibold'><span className='text-secondary'>My Education:</span> studying CSE diploma in "Mangrove Institute of Science and Technology"</h4>
             <h1 className='text-xl text-center font-semibold text-primary my-10'>List Of Technologies I have experienced</h1>
             <div>
                 <div class="overflow-x-auto">
