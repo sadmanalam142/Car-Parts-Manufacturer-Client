@@ -12,7 +12,7 @@ const MyOrders = () => {
     const navigate = useNavigate();
     const [deletingOrder, setDeletingOrder] = useState(null);
 
-    const { data: orders, isLoading, refetch } = useQuery(['order', user], () => fetch(`https://car-parts-manufacturer-85r7.onrender.com/order?email=${user.email}`, {
+    const { data: orders, isLoading, refetch } = useQuery(['order', user], () => fetch(`https://car-parts-manufacturer-server.vercel.app/order?email=${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

@@ -10,7 +10,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     const { register, handleSubmit, reset } = useForm();
 
-    const { data: users, isLoading, refetch } = useQuery(['users', user.email], () => fetch(`https://car-parts-manufacturer-85r7.onrender.com/profile/${user.email}`, {
+    const { data: users, isLoading, refetch } = useQuery(['users', user.email], () => fetch(`https://car-parts-manufacturer-server.vercel.app/profile/${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -28,7 +28,7 @@ const MyProfile = () => {
             number: data.number,
             linkedIn: data.linkedIn
         }
-        fetch(`https://car-parts-manufacturer-85r7.onrender.com/profile/${user.email}`, {
+        fetch(`https://car-parts-manufacturer-server.vercel.app/profile/${user.email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json',

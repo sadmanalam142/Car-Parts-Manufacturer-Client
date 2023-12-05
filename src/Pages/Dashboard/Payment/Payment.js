@@ -11,7 +11,7 @@ const stripePromise = loadStripe('pk_test_51L4ADvA2LqtSlNUd1jVzE0VW2RPnzQCzOqdnP
 const Payment = () => {
     const { id } = useParams();
 
-    const { data: order, isLoading } = useQuery(['orders', id], () => fetch(`https://car-parts-manufacturer-85r7.onrender.com/order/${id}`, {
+    const { data: order, isLoading } = useQuery(['orders', id], () => fetch(`https://car-parts-manufacturer-server.vercel.app/order/${id}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

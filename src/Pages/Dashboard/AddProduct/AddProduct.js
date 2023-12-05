@@ -28,7 +28,7 @@ const AddProduct = () => {
                         description: data.description,
                         img: img
                     }
-                    fetch('https://car-parts-manufacturer-85r7.onrender.com/part', {
+                    fetch('https://car-parts-manufacturer-server.vercel.app/part', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
