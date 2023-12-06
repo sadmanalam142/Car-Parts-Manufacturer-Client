@@ -14,7 +14,7 @@ const AddAReview = () => {
             description: descriptionRef.current.value
         }
 
-        fetch('https://car-parts-manufacturer-server.vercel.app/review', {
+        fetch('https://car-parts-manufacturer-85r7.onrender.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

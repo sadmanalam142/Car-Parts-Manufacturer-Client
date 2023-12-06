@@ -5,7 +5,7 @@ const OrderDeletingModal = ({ deletingOrder, refetch, setDeletingOrder }) => {
     const {_id, itemName } = deletingOrder;
 
     const handleDelete = id => {
-        fetch(`https://car-parts-manufacturer-server.vercel.app/order/${id}`, {
+        fetch(`https://car-parts-manufacturer-85r7.onrender.com/order/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

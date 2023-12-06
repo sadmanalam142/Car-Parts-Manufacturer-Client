@@ -6,7 +6,7 @@ import ProductsTable from '../ProductsTable/ProductsTable';
 
 const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
-    const { data: products, isLoading, refetch } = useQuery('doctors', () => fetch('https://car-parts-manufacturer-server.vercel.app/part', {
+    const { data: products, isLoading, refetch } = useQuery('doctors', () => fetch('https://car-parts-manufacturer-85r7.onrender.com/part', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

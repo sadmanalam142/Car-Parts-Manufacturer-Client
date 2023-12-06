@@ -7,7 +7,7 @@ const useAdmin = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://car-parts-manufacturer-server.vercel.app/admin/${email}`, {
+            fetch(`https://car-parts-manufacturer-85r7.onrender.com/admin/${email}`, {
                 method: 'GET',
                 headers: {
                     'content-type': 'application/json',

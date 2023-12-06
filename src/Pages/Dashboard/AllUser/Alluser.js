@@ -4,7 +4,7 @@ import Loading from '../../../Shared/Loading/Loading';
 import User from '../User/User';
 
 const Alluser = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://car-parts-manufacturer-server.vercel.app/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://car-parts-manufacturer-85r7.onrender.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
